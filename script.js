@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavbar();
     initMobileMenu();
     initLanguageToggle();
+    initTranslateDropdown();
     initIPDetection();
     initFAQ();
     initSmoothScroll();
@@ -45,21 +46,25 @@ function initMobileMenu() {
 }
 
 // ========================================
-// Language Toggle
+// Language Toggle (Manual)
 // ========================================
 function initLanguageToggle() {
     const langToggle = document.getElementById('lang-toggle');
     const langSwitch = document.getElementById('lang-switch');
     const body = document.body;
     
-    langToggle.addEventListener('click', () => {
-        toggleLanguage();
-    });
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            toggleLanguage();
+        });
+    }
     
-    langSwitch.addEventListener('click', () => {
-        toggleLanguage();
-        hideLangBanner();
-    });
+    if (langSwitch) {
+        langSwitch.addEventListener('click', () => {
+            toggleLanguage();
+            hideLangBanner();
+        });
+    }
     
     function toggleLanguage() {
         body.classList.toggle('lang-en');
@@ -72,6 +77,29 @@ function initLanguageToggle() {
         
         if (toggleFlag) toggleFlag.textContent = flag;
         if (toggleText) toggleText.textContent = text;
+    }
+}
+
+// ========================================
+// Translate Dropdown
+// ========================================
+function initTranslateDropdown() {
+    const translateBtn = document.getElementById('translate-btn');
+    const translateDropdown = document.getElementById('translate-dropdown');
+    
+    if (translateBtn && translateDropdown) {
+        translateBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            translateDropdown.classList.toggle('hidden');
+        });
+        
+        document.addEventListener('click', () => {
+            translateDropdown.classList.add('hidden');
+        });
+        
+        translateDropdown.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
     }
 }
 
