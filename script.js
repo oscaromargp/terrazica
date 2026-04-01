@@ -7,8 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initLanguageToggle();
     initIPDetection();
-    initAccordions();
-    initParticles();
+    initFAQ();
     initSmoothScroll();
 });
 
@@ -46,19 +45,17 @@ function initMobileMenu() {
 }
 
 // ========================================
-// Language Toggle System - Fixed
+// Language Toggle
 // ========================================
 function initLanguageToggle() {
     const langToggle = document.getElementById('lang-toggle');
     const langSwitch = document.getElementById('lang-switch');
     const body = document.body;
     
-    // Toggle button in navbar
     langToggle.addEventListener('click', () => {
         toggleLanguage();
     });
     
-    // Switch button in banner
     langSwitch.addEventListener('click', () => {
         toggleLanguage();
         hideLangBanner();
@@ -67,7 +64,6 @@ function initLanguageToggle() {
     function toggleLanguage() {
         body.classList.toggle('lang-en');
         
-        // Update toggle button appearance
         const flag = body.classList.contains('lang-en') ? '🇺🇸' : '🇲🇽';
         const text = body.classList.contains('lang-en') ? 'ENG' : 'ESP';
         
@@ -92,7 +88,7 @@ function hideLangBanner() {
 }
 
 // ========================================
-// IP Detection for Language
+// IP Detection
 // ========================================
 function initIPDetection() {
     fetch('https://ipapi.co/json/')
@@ -100,7 +96,6 @@ function initIPDetection() {
         .then(data => {
             const countryCode = data.country_code;
             if (countryCode && countryCode !== 'MX') {
-                // If not from Mexico, switch to English
                 document.body.classList.add('lang-en');
                 updateToggleButton('en');
                 showLangBanner();
@@ -124,37 +119,9 @@ function updateToggleButton(lang) {
 }
 
 // ========================================
-// Accordions (Experiencias & FAQ)
+// FAQ Accordions
 // ========================================
-function initAccordions() {
-    // Experiencias accordion
-    const accordionToggles = document.querySelectorAll('.accordion-toggle');
-    
-    accordionToggles.forEach(toggle => {
-        toggle.addEventListener('click', () => {
-            const content = toggle.nextElementSibling;
-            const isHidden = content.classList.contains('hidden');
-            
-            // Close all others in same section
-            const parent = toggle.closest('.accordion-item');
-            if (parent && parent.parentElement) {
-                parent.parentElement.querySelectorAll('.accordion-content').forEach(c => {
-                    c.classList.add('hidden');
-                });
-                parent.parentElement.querySelectorAll('.accordion-toggle').forEach(t => {
-                    t.classList.remove('active');
-                });
-            }
-            
-            // Toggle current
-            if (isHidden) {
-                content.classList.remove('hidden');
-                toggle.classList.add('active');
-            }
-        });
-    });
-    
-    // FAQ Accordions
+function initFAQ() {
     const faqToggles = document.querySelectorAll('.faq-toggle');
     
     faqToggles.forEach(toggle => {
@@ -163,28 +130,6 @@ function initAccordions() {
             content.classList.toggle('hidden');
             toggle.classList.toggle('active');
         });
-    });
-}
-
-// ========================================
-// Floating Particles
-// ========================================
-function initParticles() {
-    const containers = document.querySelectorAll('.particles-container');
-    
-    containers.forEach(container => {
-        for (let i = 0; i < 15; i++) {
-            const particle = document.createElement('div');
-            particle.classList.add('particle');
-            particle.style.left = `${Math.random() * 100}%`;
-            particle.style.top = `${Math.random() * 100}%`;
-            particle.style.animationDelay = `${Math.random() * 20}s`;
-            particle.style.animationDuration = `${15 + Math.random() * 10}s`;
-            const size = 2 + Math.random() * 3;
-            particle.style.width = `${size}px`;
-            particle.style.height = `${size}px`;
-            container.appendChild(particle);
-        }
     });
 }
 
