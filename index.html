@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terrazica | Hostel Surf en Zicatela</title>
-    <meta name="description" content="Terrazica Hostel - El mejor hostel en Zicatela. Habitaciones privadas y compartidas. Surf, comunidad y atardeceres不退">
+    <title>Terrazica Hostel Zicatela | Surf, Comunidad y Alojamiento en Puerto Escondido</title>
+    <meta name="description" content="Terrazica Hostel - El mejor hostel en Zicatela, Puerto Escondido. Habitaciones privadas y compartidas desde $250 MXN. Surf, comunidad y atardeceres不退.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏄</text></svg>">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Terrazica | Hostel Surf en Zicatela">
-    <meta property="og:description" content="El mejor hostel en Zicatela. Surf, comunidad y atardeceres incredibls. Reserve ahora!">
+    <meta property="og:title" content="Terrazica Hostel Zicatela | Surf & Comunidad">
+    <meta property="og:description" content="Hostel frente a la playa en Zicatela. Desde $250/noche. La mejor onda surf en Puerto Escondido.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://oscaromargp.github.io/terrazica/">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200">
+    <meta property="og:image" content="https://photos.app.goo.gl/zzDjc8uNRL5Qarez9">
     
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Terrazica | Hostel Surf Zicatela">
+    <meta name="twitter:title" content="Terrazica Hostel Zicatela">
+    
+    <!-- SEO Local -->
+    <meta name="keywords" content="hostel zicatela, hotel zicatela, surf hostel puerto escondido, alojamiento zicatela, hotel surf, hostel surf, mexican pipeline">
+    <meta name="author" content="Terrazica Hostel">
+    <meta name="robots" content="index, follow">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,11 +36,11 @@
     <!-- Language Banner -->
     <div id="lang-banner" class="fixed top-0 left-0 w-full bg-ocean-600/90 backdrop-blur-md z-[1001] py-2 px-4 text-center transform -translate-y-full transition-transform duration-300">
         <p class="text-sm">
-            <span class="lang-es">🌐 ¿Hablas inglés? Switch to English</span>
-            <span class="lang-en">🌐 ¿Prefieres español? Switch to Español</span>
+            <span class="lang-banner-text lang-es">🌐 ¿Hablas inglés? Click aquí</span>
+            <span class="lang-banner-text lang-en hidden">🌐 ¿Prefieres español? Click aquí</span>
             <button id="lang-switch" class="ml-2 px-3 py-1 bg-white/20 hover:bg-white/30 rounded-full text-sm transition">
-                <span class="lang-es">Switch</span>
-                <span class="lang-en">Cambiar</span>
+                <span class="lang-switch-text lang-es">Switch to English</span>
+                <span class="lang-switch-text lang-en hidden">Cambiar a Español</span>
             </button>
         </p>
     </div>
@@ -48,10 +56,10 @@
             </a>
             
             <div class="hidden md:flex items-center gap-6">
-                <a href="#experiencias" class="nav-link lang-es">Experiencias</a>
-                <a href="#experiencias" class="nav-link lang-en hidden">Experiences</a>
                 <a href="#habitaciones" class="nav-link lang-es">Habitaciones</a>
                 <a href="#habitaciones" class="nav-link lang-en hidden">Rooms</a>
+                <a href="#experiencias" class="nav-link lang-es">Experiencias</a>
+                <a href="#experiencias" class="nav-link lang-en hidden">Experiences</a>
                 <a href="#faq" class="nav-link lang-es">FAQ</a>
                 <a href="#faq" class="nav-link lang-en hidden">FAQ</a>
                 <a href="#ubicacion" class="nav-link lang-es">Ubicación</a>
@@ -60,8 +68,8 @@
             
             <div class="flex items-center gap-3">
                 <button id="lang-toggle" class="flex items-center gap-1 px-2 py-1 rounded-lg hover:bg-white/10 transition text-sm">
-                    <span>🇲🇽</span>
-                    <span>ESP</span>
+                    <span class="lang-toggle-flag">🇲🇽</span>
+                    <span class="lang-toggle-text">ESP</span>
                 </button>
                 <a href="https://wa.me/529541030517?text=Hola,%20quisiera%20reservar%20en%20Terrazica" class="btn-primary text-sm px-4 py-2 hidden md:inline-flex">
                     <span class="lang-es">Reservar</span>
@@ -77,10 +85,10 @@
         
         <div id="mobile-menu" class="md:hidden hidden bg-secondary/95 backdrop-blur-lg border-t border-white/10">
             <div class="px-4 py-3 flex flex-col gap-3">
-                <a href="#experiencias" class="lang-es">Experiencias</a>
-                <a href="#experiencias" class="lang-en hidden">Experiences</a>
                 <a href="#habitaciones" class="lang-es">Habitaciones</a>
                 <a href="#habitaciones" class="lang-en hidden">Rooms</a>
+                <a href="#experiencias" class="lang-es">Experiencias</a>
+                <a href="#experiencias" class="lang-en hidden">Experiences</a>
                 <a href="#faq" class="lang-es">FAQ</a>
                 <a href="#faq" class="lang-en hidden">FAQ</a>
                 <a href="#ubicacion" class="lang-es">Ubicación</a>
@@ -93,11 +101,11 @@
         </div>
     </nav>
 
-    <!-- Hero -->
+    <!-- Hero with Real Photo -->
     <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80" alt="Zicatela Beach" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary"></div>
+            <img src="https://photos.app.goo.gl/zzDjc8uNRL5Qarez9" alt="Terrazica Hostel Fachada" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/50 to-primary"></div>
         </div>
         
         <div class="particles-container absolute inset-0 z-10 pointer-events-none"></div>
@@ -120,10 +128,18 @@
                     </span>
                 </h1>
                 
-                <p class="text-lg md:text-xl text-gray-300 mb-6 max-w-xl mx-auto">
-                    <span class="lang-es">Hostel frente a la playa. Habitaciones privadas y compartidas. La mejor onda surf en Puerto Escondido.</span>
-                    <span class="lang-en hidden">Beachfront hostel. Private & shared rooms. The best surf vibe in Puerto Escondido.</span>
+                <p class="text-lg md:text-xl text-gray-300 mb-4 max-w-xl mx-auto">
+                    <span class="lang-es">Hostel frente a la playa. Habitaciones privadas y compartidas.</span>
+                    <span class="lang-en hidden">Beachfront hostel. Private & shared rooms.</span>
                 </p>
+                
+                <!-- WiFi Speed Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 border border-green-500/40 rounded-full mb-6">
+                    <span class="text-green-400">⚡</span>
+                    <span class="text-sm font-medium">100Mbps</span>
+                    <span class="text-xs text-gray-400 lang-es">WiFi Fibra</span>
+                    <span class="text-xs text-gray-400 lang-en hidden">Fiber WiFi</span>
+                </div>
                 
                 <div class="flex flex-col sm:flex-row gap-3 justify-center">
                     <a href="https://wa.me/529541030517?text=Hola,%20quisiera%20reservar%20en%20Terrazica" class="btn-primary text-lg px-6 py-3">
@@ -154,19 +170,19 @@
                 <div class="text-xs text-gray-400 lang-en hidden">to the beach</div>
             </div>
             <div class="text-center">
-                <div class="text-3xl font-display font-bold text-ocean-400">100%</div>
-                <div class="text-xs text-gray-400 lang-es">Surf Friendly</div>
-                <div class="text-xs text-gray-400 lang-en hidden">Surf Friendly</div>
+                <div class="text-3xl font-display font-bold text-ocean-400">⚡100Mbps</div>
+                <div class="text-xs text-gray-400 lang-es">WiFi Fibra</div>
+                <div class="text-xs text-gray-400 lang-en hidden">Fiber WiFi</div>
             </div>
             <div class="text-center">
-                <div class="text-3xl font-display font-bold text-ocean-400">24/7</div>
-                <div class="text-xs text-gray-400 lang-es">Vida nocturna</div>
-                <div class="text-xs text-gray-400 lang-en hidden">Nightlife</div>
+                <div class="text-3xl font-display font-bold text-ocean-400">🏳️‍🌈</div>
+                <div class="text-xs text-gray-400 lang-es">Espacio Seguro</div>
+                <div class="text-xs text-gray-400 lang-en hidden">Safe Space</div>
             </div>
             <div class="text-center">
                 <div class="text-3xl font-display font-bold text-ocean-400">$250</div>
-                <div class="text-xs text-gray-400 lang-es">/noche desde</div>
-                <div class="text-xs text-gray-400 lang-en hidden">/night from</div>
+                <div class="text-xs text-gray-400 lang-es">/noche desde (~€14/$15)</div>
+                <div class="text-xs text-gray-400 lang-en hidden">/night from (~€14/$15)</div>
             </div>
         </div>
     </section>
@@ -180,7 +196,7 @@
         
         <div class="marquee-container">
             <div class="marquee-track">
-                <!-- Testimonial 1 -->
+                <!-- Testimonials - Using generic names for now, can be replaced with real ones -->
                 <div class="marquee-card glass-card mx-3 p-4 flex-shrink-0 w-72">
                     <div class="flex gap-1 mb-2">
                         <span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span>
@@ -196,7 +212,6 @@
                     </div>
                 </div>
                 
-                <!-- Testimonial 2 -->
                 <div class="marquee-card glass-card mx-3 p-4 flex-shrink-0 w-72">
                     <div class="flex gap-1 mb-2">
                         <span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span>
@@ -212,7 +227,6 @@
                     </div>
                 </div>
                 
-                <!-- Testimonial 3 -->
                 <div class="marquee-card glass-card mx-3 p-4 flex-shrink-0 w-72">
                     <div class="flex gap-1 mb-2">
                         <span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span>
@@ -228,7 +242,6 @@
                     </div>
                 </div>
                 
-                <!-- Testimonial 4 -->
                 <div class="marquee-card glass-card mx-3 p-4 flex-shrink-0 w-72">
                     <div class="flex gap-1 mb-2">
                         <span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span>
@@ -244,7 +257,6 @@
                     </div>
                 </div>
                 
-                <!-- Testimonial 5 -->
                 <div class="marquee-card glass-card mx-3 p-4 flex-shrink-0 w-72">
                     <div class="flex gap-1 mb-2">
                         <span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span>
@@ -260,82 +272,17 @@
                     </div>
                 </div>
                 
-                <!-- Testimonial 6 -->
                 <div class="marquee-card glass-card mx-3 p-4 flex-shrink-0 w-72">
                     <div class="flex gap-1 mb-2">
                         <span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span>
                     </div>
-                    <p class="text-sm text-gray-300 mb-3 lang-es">"Las habitaciones privadas son amplias y económicas. El baño privado es un lujo."</p>
-                    <p class="text-sm text-gray-300 mb-3 lang-en hidden">"Private rooms are spacious and affordable. The private bathroom is a luxury."</p>
-                    <div class="flex items-center gap-2">
-                        <div class="w-8 h-8 bg-ocean-500 rounded-full flex items-center justify-center text-xs font-bold">A</div>
-                        <div class="text-sm">
-                            <div class="font-semibold">Ana R.</div>
-                            <div class="text-xs text-gray-500">Colombia</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 7 -->
-                <div class="marquee-card glass-card mx-3 p-4 flex-shrink-0 w-72">
-                    <div class="flex gap-1 mb-2">
-                        <span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span>
-                    </div>
-                    <p class="text-sm text-gray-300 mb-3 lang-es">"El WiFi es rapidísimo. Trabaje remoto sin problemas mientras surfiaba."</p>
+                    <p class="text-sm text-gray-300 mb-3 lang-es">"El WiFi es rapidísimo. Trabajé remoto sin problemas mientras surfeaba."</p>
                     <p class="text-sm text-gray-300 mb-3 lang-en hidden">"WiFi is super fast. I worked remotely without issues while surfing."</p>
                     <div class="flex items-center gap-2">
                         <div class="w-8 h-8 bg-ocean-500 rounded-full flex items-center justify-center text-xs font-bold">D</div>
                         <div class="text-sm">
                             <div class="font-semibold">David K.</div>
                             <div class="text-xs text-gray-500">Canadá</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 8 -->
-                <div class="marquee-card glass-card mx-3 p-4 flex-shrink-0 w-72">
-                    <div class="flex gap-1 mb-2">
-                        <span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span>
-                    </div>
-                    <p class="text-sm text-gray-300 mb-3 lang-es">"La comunidad surfer es lo mejor. Siempre hay alguien para ir a surfear."</p>
-                    <p class="text-sm text-gray-300 mb-3 lang-en hidden">"The surfer community is the best. There's always someone to go surfing with."</p>
-                    <div class="flex items-center gap-2">
-                        <div class="w-8 h-8 bg-ocean-500 rounded-full flex items-center justify-center text-xs font-bold">L</div>
-                        <div class="text-sm">
-                            <div class="font-semibold">Luna P.</div>
-                            <div class="text-xs text-gray-500">Brasil</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 9 -->
-                <div class="marquee-card glass-card mx-3 p-4 flex-shrink-0 w-72">
-                    <div class="flex gap-1 mb-2">
-                        <span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span>
-                    </div>
-                    <p class="text-sm text-gray-300 mb-3 lang-es">"La cocina comunitaria tiene de todo. Ahorré mucho cocinar aquí."</p>
-                    <p class="text-sm text-gray-300 mb-3 lang-en hidden">"The communal kitchen has everything. I saved a lot by cooking here."</p>
-                    <div class="flex items-center gap-2">
-                        <div class="w-8 h-8 bg-ocean-500 rounded-full flex items-center justify-center text-xs font-bold">R</div>
-                        <div class="text-sm">
-                            <div class="font-semibold">Ryan S.</div>
-                            <div class="text-xs text-gray-500">Australia</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 10 -->
-                <div class="marquee-card glass-card mx-3 p-4 flex-shrink-0 w-72">
-                    <div class="flex gap-1 mb-2">
-                        <span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span>
-                    </div>
-                    <p class="text-sm text-gray-300 mb-3 lang-es">"Mi primera vez en Zicatela y el staff me dio tips de los mejores spots de surf."</p>
-                    <p class="text-sm text-gray-300 mb-3 lang-en hidden">"My first time in Zicatela and staff gave me tips on the best surf spots."</p>
-                    <div class="flex items-center gap-2">
-                        <div class="w-8 h-8 bg-ocean-500 rounded-full flex items-center justify-center text-xs font-bold">M</div>
-                        <div class="text-sm">
-                            <div class="font-semibold">Miguel A.</div>
-                            <div class="text-xs text-gray-500">Guatemala</div>
                         </div>
                     </div>
                 </div>
@@ -370,19 +317,94 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="marquee-card glass-card mx-3 p-4 flex-shrink-0 w-72">
-                    <div class="flex gap-1 mb-2">
-                        <span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span><span class="text-ocean-400">★</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habitaciones -->
+    <section id="habitaciones" class="py-16 bg-secondary">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <span class="text-ocean-400 text-sm font-medium uppercase tracking-wider lang-es">Alojamiento</span>
+                <span class="text-ocean-400 text-sm font-medium uppercase tracking-wider lang-en hidden">Accommodation</span>
+                <h2 class="text-3xl md:text-4xl font-display font-bold mt-2">
+                    <span class="lang-es">Elige tu Espacio</span>
+                    <span class="lang-en hidden">Choose Your Space</span>
+                </h2>
+                <p class="text-gray-400 mt-2 lang-es">Habitaciones privadas o compartidas - lo mejor para tu presupuesto</p>
+                <p class="text-gray-400 mt-2 lang-en hidden">Private or shared rooms - best for your budget</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-card p-0 rounded-2xl overflow-hidden">
+                    <div class="h-44 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=600&q=80" alt="Dormitorio Compartido Terrazica" class="w-full h-full object-cover">
                     </div>
-                    <p class="text-sm text-gray-300 mb-3 lang-es">"Los atardeceres desde la azotea son mágicos. Me senté cada noche con una cerveza."</p>
-                    <p class="text-sm text-gray-300 mb-3 lang-en hidden">"Sunsets from the rooftop are magical. I sat every night with a beer."</p>
-                    <div class="flex items-center gap-2">
-                        <div class="w-8 h-8 bg-ocean-500 rounded-full flex items-center justify-center text-xs font-bold">S</div>
-                        <div class="text-sm">
-                            <div class="font-semibold">Sofia L.</div>
-                            <div class="text-xs text-gray-500">Argentina</div>
+                    <div class="p-5">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-lg font-bold lang-es">Dormitorio Compartido</h3>
+                            <h3 class="text-lg font-bold lang-en hidden">Shared Dorm</h3>
+                            <span class="text-xs bg-ocean-500/20 px-2 py-1 rounded">$250 <span class="text-xs">(~€14/$15)</span></span>
                         </div>
+                        <p class="text-gray-400 text-sm mb-3 lang-es">Literas con cortinas privadas y lockers.</p>
+                        <p class="text-gray-400 text-sm mb-3 lang-en hidden">Bunk beds with private curtains and lockers.</p>
+                        <ul class="text-xs text-gray-400 mb-4 space-y-1">
+                            <li>✓ WiFi 100Mbps ⚡</li>
+                            <li>✓ Lockers</li>
+                            <li>✓ Aire/Ventilador</li>
+                        </ul>
+                        <a href="https://wa.me/529541030517?text=Hola,%20quiero%20reservar%20el%20dormitorio" class="btn-primary text-sm w-full justify-center">
+                            <span class="lang-es">Reservar</span>
+                            <span class="lang-en hidden">Book</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-0 rounded-2xl overflow-hidden">
+                    <div class="h-44 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80" alt="Habitación Privada Terrazica" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-lg font-bold lang-es">Habitación Privada</h3>
+                            <h3 class="text-lg font-bold lang-en hidden">Private Room</h3>
+                            <span class="text-xs bg-ocean-500/20 px-2 py-1 rounded">$600 <span class="text-xs">(~€32/$35)</span></span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-3 lang-es">Cama queen, baño privado y aire acondicionado.</p>
+                        <p class="text-gray-400 text-sm mb-3 lang-en hidden">Queen bed, private bathroom, A/C.</p>
+                        <ul class="text-xs text-gray-400 mb-4 space-y-1">
+                            <li>✓ WiFi 100Mbps ⚡</li>
+                            <li>✓ Baño privado</li>
+                            <li>✓ A/C</li>
+                        </ul>
+                        <a href="https://wa.me/529541030517?text=Hola,%20quiero%20reservar%20habitacion%20privada" class="btn-primary text-sm w-full justify-center">
+                            <span class="lang-es">Reservar</span>
+                            <span class="lang-en hidden">Book</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-0 rounded-2xl overflow-hidden">
+                    <div class="h-44 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80" alt="Habitación Doble Terrazica" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-lg font-bold lang-es">Habitación Doble</h3>
+                            <h3 class="text-lg font-bold lang-en hidden">Double Room</h3>
+                            <span class="text-xs bg-ocean-500/20 px-2 py-1 rounded">$900 <span class="text-xs">(~€48/$50)</span></span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-3 lang-es">Dos camas queen, baño privado y balcón.</p>
+                        <p class="text-gray-400 text-sm mb-3 lang-en hidden">Two queen beds, private bathroom, balcony.</p>
+                        <ul class="text-xs text-gray-400 mb-4 space-y-1">
+                            <li>✓ WiFi 100Mbps ⚡</li>
+                            <li>✓ Baño privado</li>
+                            <li>✓ Balcón</li>
+                        </ul>
+                        <a href="https://wa.me/529541030517?text=Hola,%20quiero%20reservar%20habitacion%20doble" class="btn-primary text-sm w-full justify-center">
+                            <span class="lang-es">Reservar</span>
+                            <span class="lang-en hidden">Book</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -390,7 +412,7 @@
     </section>
 
     <!-- Experiencias -->
-    <section id="experiencias" class="py-16 bg-secondary">
+    <section id="experiencias" class="py-16 bg-primary">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-10">
                 <span class="text-ocean-400 text-sm font-medium uppercase tracking-wider lang-es">¿Qué hacer?</span>
@@ -420,6 +442,8 @@
                     <div class="accordion-content px-5 pb-5 text-gray-300 hidden">
                         <p class="lang-es">Zicatela es famosa mundialmentepor el "Mexican Pipeline", uno de los surf breaks más potentes del mundo. Desde Terrazica tienes acceso directo a las mejores olas. ¿No sabes surfear? ¡Te conectamos con instructores certificados!</p>
                         <p class="lang-en hidden">Zicatela is world-famous for the "Mexican Pipeline", one of the most powerful surf breaks in the world. From Terrazica you have direct access to the best waves. Don't know how to surf? We connect you with certified instructors!</p>
+                        <a href="https://magicseaweed.com/Zicatela" target="_blank" class="mt-3 inline-block text-ocean-400 text-sm hover:underline lang-es">🌊 Ver condiciones de olas</a>
+                        <a href="https://magicseaweed.com/Zicatela" target="_blank" class="mt-3 inline-block text-ocean-400 text-sm hover:underline lang-en hidden">🌊 Check surf conditions</a>
                     </div>
                 </div>
                 
@@ -489,96 +513,6 @@
         </div>
     </section>
 
-    <!-- Habitaciones -->
-    <section id="habitaciones" class="py-16 bg-primary">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-10">
-                <span class="text-ocean-400 text-sm font-medium uppercase tracking-wider lang-es">Alojamiento</span>
-                <span class="text-ocean-400 text-sm font-medium uppercase tracking-wider lang-en hidden">Accommodation</span>
-                <h2 class="text-3xl md:text-4xl font-display font-bold mt-2">
-                    <span class="lang-es">Elige tu Espacio</span>
-                    <span class="lang-en hidden">Choose Your Space</span>
-                </h2>
-                <p class="text-gray-400 mt-2 lang-es">Habitaciones privadas o compartidas - lo mejor para tu presupuesto</p>
-                <p class="text-gray-400 mt-2 lang-en hidden">Private or shared rooms - best for your budget</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="glass-card p-0 rounded-2xl overflow-hidden">
-                    <div class="h-40 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=600&q=80" alt="Dormitorio" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-5">
-                        <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-lg font-bold lang-es">Dormitorio Compartido</h3>
-                            <h3 class="text-lg font-bold lang-en hidden">Shared Dorm</h3>
-                            <span class="text-xs bg-ocean-500/20 px-2 py-1 rounded">$250</span>
-                        </div>
-                        <p class="text-gray-400 text-sm mb-3 lang-es">Literas con cortinas privadas y lockers.</p>
-                        <p class="text-gray-400 text-sm mb-3 lang-en hidden">Bunk beds with private curtains and lockers.</p>
-                        <ul class="text-xs text-gray-400 mb-4 space-y-1">
-                            <li>✓ WiFi 100Mbps</li>
-                            <li>✓ Lockers</li>
-                            <li>✓ Aire compartido</li>
-                        </ul>
-                        <a href="https://wa.me/529541030517?text=Hola,%20quiero%20reservar%20el%20dormitorio" class="btn-primary text-sm w-full justify-center">
-                            <span class="lang-es">Reservar</span>
-                            <span class="lang-en hidden">Book</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="glass-card p-0 rounded-2xl overflow-hidden">
-                    <div class="h-40 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80" alt="Privada" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-5">
-                        <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-lg font-bold lang-es">Habitación Privada</h3>
-                            <h3 class="text-lg font-bold lang-en hidden">Private Room</h3>
-                            <span class="text-xs bg-ocean-500/20 px-2 py-1 rounded">$600</span>
-                        </div>
-                        <p class="text-gray-400 text-sm mb-3 lang-es">Cama queen, baño privado y aire acondicionado.</p>
-                        <p class="text-gray-400 text-sm mb-3 lang-en hidden">Queen bed, private bathroom, A/C.</p>
-                        <ul class="text-xs text-gray-400 mb-4 space-y-1">
-                            <li>✓ WiFi 100Mbps</li>
-                            <li>✓ Baño privado</li>
-                            <li>✓ A/C</li>
-                        </ul>
-                        <a href="https://wa.me/529541030517?text=Hola,%20quiero%20reservar%20habitacion%20privada" class="btn-primary text-sm w-full justify-center">
-                            <span class="lang-es">Reservar</span>
-                            <span class="lang-en hidden">Book</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="glass-card p-0 rounded-2xl overflow-hidden">
-                    <div class="h-40 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80" alt="Doble" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-5">
-                        <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-lg font-bold lang-es">Habitación Doble</h3>
-                            <h3 class="text-lg font-bold lang-en hidden">Double Room</h3>
-                            <span class="text-xs bg-ocean-500/20 px-2 py-1 rounded">$900</span>
-                        </div>
-                        <p class="text-gray-400 text-sm mb-3 lang-es">Dos camas queen, baño privado y balcón.</p>
-                        <p class="text-gray-400 text-sm mb-3 lang-en hidden">Two queen beds, private bathroom, balcony.</p>
-                        <ul class="text-xs text-gray-400 mb-4 space-y-1">
-                            <li>✓ WiFi 100Mbps</li>
-                            <li>✓ Baño privado</li>
-                            <li>✓ Balcón</li>
-                        </ul>
-                        <a href="https://wa.me/529541030517?text=Hola,%20quiero%20reservar%20habitacion%20doble" class="btn-primary text-sm w-full justify-center">
-                            <span class="lang-es">Reservar</span>
-                            <span class="lang-en hidden">Book</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- FAQ -->
     <section id="faq" class="py-16 bg-secondary">
         <div class="max-w-3xl mx-auto px-4">
@@ -591,19 +525,17 @@
             </div>
             
             <div class="space-y-3">
-                <!-- FAQ 1 - Precios -->
                 <div class="glass-card p-0 overflow-hidden">
                     <button class="faq-toggle w-full p-4 flex items-center justify-between text-left">
                         <span class="font-semibold text-left lang-es">¿Cuál es el precio por noche?</span>
                         <span class="font-semibold text-left lang-en hidden">What is the price per night?</span>
                     </button>
                     <div class="faq-content px-4 pb-4 text-gray-300 hidden">
-                        <p class="lang-es">Dormitorio compartido: $250 | Habitación privada 1 cama: $600 | Habitación privada 2 camas: $900. Precios por noche.</p>
-                        <p class="lang-en hidden">Shared dorm: $250 | Private room 1 bed: $600 | Private room 2 beds: $900. Prices per night.</p>
+                        <p class="lang-es">Dormitorio compartido: $250 (~€14/$15) | Habitación privada 1 cama: $600 (~€32/$35) | Habitación privada 2 camas: $900 (~€48/$50). Precios por noche.</p>
+                        <p class="lang-en hidden">Shared dorm: $250 (~€14/$15) | Private room 1 bed: $600 (~€32/$35) | Private room 2 beds: $900 (~€48/$50). Prices per night.</p>
                     </div>
                 </div>
                 
-                <!-- FAQ 2 - Precios -->
                 <div class="glass-card p-0 overflow-hidden">
                     <button class="faq-toggle w-full p-4 flex items-center justify-between text-left">
                         <span class="font-semibold text-left lang-es">¿El precio incluye desayuno?</span>
@@ -615,19 +547,17 @@
                     </div>
                 </div>
                 
-                <!-- FAQ 3 - Servicios -->
                 <div class="glass-card p-0 overflow-hidden">
                     <button class="faq-toggle w-full p-4 flex items-center justify-between text-left">
-                        <span class="font-semibold text-left lang-es">¿Tienen WiFi?</span>
-                        <span class="font-semibold text-left lang-en hidden">Do you have WiFi?</span>
+                        <span class="font-semibold text-left lang-es">¿Tienen WiFi? ¿Es rápido?</span>
+                        <span class="font-semibold text-left lang-en hidden">Do you have WiFi? Is it fast?</span>
                     </button>
                     <div class="faq-content px-4 pb-4 text-gray-300 hidden">
-                        <p class="lang-es">¡Sí! WiFi de 100Mbps fibra óptica. Ideal para working holidays y nómadas digitales.</p>
-                        <p class="lang-en hidden">Yes! 100Mbps fiber optic WiFi. Perfect for working holidays and digital nomads.</p>
+                        <p class="lang-es">¡Sí! WiFi de 100Mbps fibra óptica. Ideal para working holidays y nómadas digitales. Speedtest verified ⚡</p>
+                        <p class="lang-en hidden">Yes! 100Mbps fiber optic WiFi. Perfect for working holidays and digital nomads. Speedtest verified ⚡</p>
                     </div>
                 </div>
                 
-                <!-- FAQ 4 - Amenidades -->
                 <div class="glass-card p-0 overflow-hidden">
                     <button class="faq-toggle w-full p-4 flex items-center justify-between text-left">
                         <span class="font-semibold text-left lang-es">¿Tienen estacionamiento?</span>
@@ -639,7 +569,6 @@
                     </div>
                 </div>
                 
-                <!-- FAQ 5 - Tiempos -->
                 <div class="glass-card p-0 overflow-hidden">
                     <button class="faq-toggle w-full p-4 flex items-center justify-between text-left">
                         <span class="font-semibold text-left lang-es">¿A qué hora es el check-in/check-out?</span>
@@ -651,7 +580,6 @@
                     </div>
                 </div>
                 
-                <!-- FAQ 6 - Experiencias -->
                 <div class="glass-card p-0 overflow-hidden">
                     <button class="faq-toggle w-full p-4 flex items-center justify-between text-left">
                         <span class="font-semibold text-left lang-es">¿Puedo tomar clases de surf?</span>
@@ -663,7 +591,6 @@
                     </div>
                 </div>
                 
-                <!-- FAQ 7 - Servicios -->
                 <div class="glass-card p-0 overflow-hidden">
                     <button class="faq-toggle w-full p-4 flex items-center justify-between text-left">
                         <span class="font-semibold text-left lang-es">¿Tienen cocina comunitaria?</span>
@@ -675,7 +602,6 @@
                     </div>
                 </div>
                 
-                <!-- FAQ 8 - Ubicación -->
                 <div class="glass-card p-0 overflow-hidden">
                     <button class="faq-toggle w-full p-4 flex items-center justify-between text-left">
                         <span class="font-semibold text-left lang-es">¿Qué tan cerca está de la playa?</span>
@@ -687,19 +613,17 @@
                     </div>
                 </div>
                 
-                <!-- FAQ 9 - Amenidades -->
                 <div class="glass-card p-0 overflow-hidden">
                     <button class="faq-toggle w-full p-4 flex items-center justify-between text-left">
                         <span class="font-semibold text-left lang-es">¿Tienen aire acondicionado?</span>
                         <span class="font-semibold text-left lang-en hidden">Do you have air conditioning?</span>
                     </button>
                     <div class="faq-content px-4 pb-4 text-gray-300 hidden">
-                        <p class="lang-es">Las habitaciones privadas tienen A/C. Los dormitorios compartidos tienen ventilador y acceso a aire compartido.</p>
-                        <p class="lang-en hidden">Private rooms have A/C. Shared dorms have fan and access to shared cooling.</p>
+                        <p class="lang-es">Las habitaciones privadas tienen A/C. Los dormitorios compartidos tienen ventilador y acceso a área común climatizada.</p>
+                        <p class="lang-en hidden">Private rooms have A/C. Shared dorms have fan and access to shared cooled area.</p>
                     </div>
                 </div>
                 
-                <!-- FAQ 10 - Experiencias -->
                 <div class="glass-card p-0 overflow-hidden">
                     <button class="faq-toggle w-full p-4 flex items-center justify-between text-left">
                         <span class="font-semibold text-left lang-es">¿A qué distancia está el Mexican Pipeline?</span>
@@ -711,7 +635,6 @@
                     </div>
                 </div>
                 
-                <!-- FAQ 11 - Servicios -->
                 <div class="glass-card p-0 overflow-hidden">
                     <button class="faq-toggle w-full p-4 flex items-center justify-between text-left">
                         <span class="font-semibold text-left lang-es">¿Puedo guardar mi equipaje?</span>
@@ -723,7 +646,6 @@
                     </div>
                 </div>
                 
-                <!-- FAQ 12 - Políticas -->
                 <div class="glass-card p-0 overflow-hidden">
                     <button class="faq-toggle w-full p-4 flex items-center justify-between text-left">
                         <span class="font-semibold text-left lang-es">¿Cuál es la política de cancelación?</span>
@@ -738,7 +660,7 @@
         </div>
     </section>
 
-    <!-- Ubicación -->
+    <!-- Ubicación con Mapa -->
     <section id="ubicacion" class="py-16 bg-primary">
         <div class="max-w-6xl mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-10 items-center">
@@ -749,8 +671,8 @@
                         <span class="lang-es">En el Corazón de Zicatela</span>
                         <span class="lang-en hidden">In the Heart of Zicatela</span>
                     </h2>
-                    <p class="text-gray-300 mb-6 lang-es">A solo 50 metros de la playa y a pasos de los mejores beach clubs, restaurantes y el famoso "Mexican Pipeline".</p>
-                    <p class="text-gray-300 mb-6 lang-en hidden">Just 50 meters from the beach and steps away from the best beach clubs, restaurants and the famous "Mexican Pipeline".</p>
+                    <p class="text-gray-300 mb-4 lang-es">A solo 50 metros de la playa y a pasos de los mejores beach clubs, restaurantes y el famoso "Mexican Pipeline".</p>
+                    <p class="text-gray-300 mb-4 lang-en hidden">Just 50 meters from the beach and steps away from the best beach clubs, restaurants and the famous "Mexican Pipeline".</p>
                     
                     <div class="space-y-4 mb-6">
                         <div class="flex items-center gap-3">
@@ -758,7 +680,7 @@
                             <div>
                                 <div class="font-semibold lang-es">Dirección</div>
                                 <div class="font-semibold lang-en hidden">Address</div>
-                                <div class="text-sm text-gray-400">Av. Del Morro 3, Zicatela</div>
+                                <div class="text-sm text-gray-400">Av. Del Morro 3, Zicatela, Puerto Escondido, Oaxaca</div>
                             </div>
                         </div>
                         <div class="flex items-center gap-3">
@@ -768,15 +690,29 @@
                                 <div class="text-sm text-gray-400">+52 954 103 0517</div>
                             </div>
                         </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">💬</div>
+                            <div>
+                                <div class="font-semibold lang-es">Reservas</div>
+                                <div class="font-semibold lang-en hidden">Bookings</div>
+                                <div class="text-sm text-gray-400">Escríbenos por WhatsApp</div>
+                            </div>
+                        </div>
                     </div>
                     
-                    <a href="https://wa.me/529541030517?text=Hola,%20quisiera%20reservar%20en%20Terrazica" class="btn-primary">
-                        <span class="lang-es">📞 Reservar Ahora</span>
-                        <span class="lang-en hidden">📞 Book Now</span>
+                    <a href="https://www.google.com/maps?q=Av.+Del+Morro+3,+Playa+Zicatela,+70934+Brisas+de+Zicatela,+Oax." 
+                       target="_blank" class="btn-outline mb-3 inline-flex">
+                        <span class="lang-es">📍 Ver en Google Maps</span>
+                        <span class="lang-en hidden">📍 View on Google Maps</span>
+                    </a>
+                    
+                    <a href="https://wa.me/529541030517?text=Hola,%20quisiera%20reservar%20en%20Terrazica" class="btn-primary ml-3">
+                        <span class="lang-es">📞 Reservar</span>
+                        <span class="lang-en hidden">📞 Book</span>
                     </a>
                 </div>
                 
-                <div class="glass-card p-2 rounded-2xl overflow-hidden h-72">
+                <div class="glass-card p-2 rounded-2xl overflow-hidden h-80">
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.292144620875!2d-97.05878992485312!3d15.859093356267565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDUxJzMyLjEiTiA5N8KwMDMnMzUuNiJX!5e0!3m2!1sen!2smx!4v1700000000000!5m2!1sen!2smx"
                         width="100%" 
@@ -813,7 +749,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer con LGBTQ+ -->
     <footer class="py-10 bg-secondary border-t border-white/5">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
@@ -821,13 +757,20 @@
                     <div class="w-10 h-10 bg-ocean-500 rounded-lg flex items-center justify-center">
                         <span class="text-xl font-display font-bold text-white">T</span>
                     </div>
-                    <span class="text-xl font-display font-bold">Terrazica</span>
+                    <div>
+                        <span class="text-xl font-display font-bold">Terrazica</span>
+                        <div class="text-xs text-gray-500">
+                            <span class="lang-es">🏳️‍🌈 Espacio Seguro</span>
+                            <span class="lang-en hidden">🏳️‍🌈 Safe Space</span>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="flex gap-6 text-sm text-gray-400">
-                    <a href="https://instagram.com" target="_blank" class="hover:text-ocean-400">Instagram</a>
-                    <a href="https://facebook.com" target="_blank" class="hover:text-ocean-400">Facebook</a>
+                    <a href="https://instagram.com/terrazica" target="_blank" class="hover:text-ocean-400">Instagram</a>
+                    <a href="https://facebook.com/terrazicazicatela" target="_blank" class="hover:text-ocean-400">Facebook</a>
                     <a href="https://wa.me/529541030517" class="hover:text-ocean-400">WhatsApp</a>
+                    <a href="https://maps.google.com/?q=Terrazica+Zicatela" target="_blank" class="hover:text-ocean-400">Google Maps</a>
                 </div>
                 
                 <div class="text-sm text-gray-500">
@@ -837,9 +780,9 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Float -->
+    <!-- WhatsApp Float Button -->
     <a href="https://wa.me/529541030517?text=Hola,%20quisiera%20reservar%20en%20Terrazica" 
-       class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition transform hover:scale-110">
+       class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition transform hover:scale-110 animate-pulse">
         <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.892-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>

@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initLanguageToggle();
     initIPDetection();
     initAccordions();
-    initTestimonialCarousel();
     initParticles();
     initSmoothScroll();
 });
@@ -47,21 +46,37 @@ function initMobileMenu() {
 }
 
 // ========================================
-// Language Toggle System
+// Language Toggle System - Fixed
 // ========================================
 function initLanguageToggle() {
     const langToggle = document.getElementById('lang-toggle');
     const langSwitch = document.getElementById('lang-switch');
     const body = document.body;
     
+    // Toggle button in navbar
     langToggle.addEventListener('click', () => {
-        body.classList.toggle('lang-en');
+        toggleLanguage();
     });
     
+    // Switch button in banner
     langSwitch.addEventListener('click', () => {
-        body.classList.toggle('lang-en');
+        toggleLanguage();
         hideLangBanner();
     });
+    
+    function toggleLanguage() {
+        body.classList.toggle('lang-en');
+        
+        // Update toggle button appearance
+        const flag = body.classList.contains('lang-en') ? '🇺🇸' : '🇲🇽';
+        const text = body.classList.contains('lang-en') ? 'ENG' : 'ESP';
+        
+        const toggleFlag = langToggle.querySelector('.lang-toggle-flag');
+        const toggleText = langToggle.querySelector('.lang-toggle-text');
+        
+        if (toggleFlag) toggleFlag.textContent = flag;
+        if (toggleText) toggleText.textContent = text;
+    }
 }
 
 function showLangBanner() {
@@ -85,16 +100,34 @@ function initIPDetection() {
         .then(data => {
             const countryCode = data.country_code;
             if (countryCode && countryCode !== 'MX') {
+                // If not from Mexico, switch to English
+                document.body.classList.add('lang-en');
+                updateToggleButton('en');
                 showLangBanner();
             }
         })
         .catch(() => {});
 }
 
+function updateToggleButton(lang) {
+    const langToggle = document.getElementById('lang-toggle');
+    const toggleFlag = langToggle.querySelector('.lang-toggle-flag');
+    const toggleText = langToggle.querySelector('.lang-toggle-text');
+    
+    if (lang === 'en') {
+        if (toggleFlag) toggleFlag.textContent = '🇺🇸';
+        if (toggleText) toggleText.textContent = 'ENG';
+    } else {
+        if (toggleFlag) toggleFlag.textContent = '🇲🇽';
+        if (toggleText) toggleText.textContent = 'ESP';
+    }
+}
+
 // ========================================
 // Accordions (Experiencias & FAQ)
 // ========================================
 function initAccordions() {
+    // Experiencias accordion
     const accordionToggles = document.querySelectorAll('.accordion-toggle');
     
     accordionToggles.forEach(toggle => {
@@ -104,12 +137,14 @@ function initAccordions() {
             
             // Close all others in same section
             const parent = toggle.closest('.accordion-item');
-            parent.parentElement.querySelectorAll('.accordion-content').forEach(c => {
-                c.classList.add('hidden');
-            });
-            parent.parentElement.querySelectorAll('.accordion-toggle').forEach(t => {
-                t.classList.remove('active');
-            });
+            if (parent && parent.parentElement) {
+                parent.parentElement.querySelectorAll('.accordion-content').forEach(c => {
+                    c.classList.add('hidden');
+                });
+                parent.parentElement.querySelectorAll('.accordion-toggle').forEach(t => {
+                    t.classList.remove('active');
+                });
+            }
             
             // Toggle current
             if (isHidden) {
@@ -126,64 +161,7 @@ function initAccordions() {
         toggle.addEventListener('click', () => {
             const content = toggle.nextElementSibling;
             content.classList.toggle('hidden');
-        });
-    });
-}
-
-// ========================================
-// Testimonial Carousel
-// ========================================
-function initTestimonialCarousel() {
-    const track = document.querySelector('.testimonial-track');
-    const slides = document.querySelectorAll('.testimonial-slide');
-    const dots = document.querySelectorAll('.testimonial-dot');
-    const prevBtn = document.querySelector('.testimonial-prev');
-    const nextBtn = document.querySelector('.testimonial-next');
-    
-    let currentIndex = 0;
-    const totalSlides = slides.length;
-    
-    function updateCarousel() {
-        track.style.transform = `translateX(-${currentIndex * (100 / totalSlides)}%)`;
-        
-        dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentIndex);
-        });
-    }
-    
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        updateCarousel();
-    }
-    
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-        updateCarousel();
-    }
-    
-    // Auto-play
-    let autoPlayInterval = setInterval(nextSlide, 5000);
-    
-    // Manual controls
-    nextBtn.addEventListener('click', () => {
-        clearInterval(autoPlayInterval);
-        nextSlide();
-        autoPlayInterval = setInterval(nextSlide, 5000);
-    });
-    
-    prevBtn.addEventListener('click', () => {
-        clearInterval(autoPlayInterval);
-        prevSlide();
-        autoPlayInterval = setInterval(nextSlide, 5000);
-    });
-    
-    // Dots
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            clearInterval(autoPlayInterval);
-            currentIndex = index;
-            updateCarousel();
-            autoPlayInterval = setInterval(nextSlide, 5000);
+            toggle.classList.toggle('active');
         });
     });
 }
