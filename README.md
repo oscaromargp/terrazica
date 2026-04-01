@@ -117,7 +117,7 @@ El sitio ya está desplegado en **GitHub Pages**:
 ## 📞 Contacto
 
 - **WhatsApp**: +52 954 103 0517
-- **Dirección**: Av. Del Morro 3, Zicatela, Oaxaca
+- **Dirección**: C. del Morro, Playa Zicatela, 70934 Puerto Escondido, Oax.
 - **Instagram**: @terrazica
 - **Facebook**: Terrazica Hostel
 
