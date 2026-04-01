@@ -3,12 +3,10 @@
    ======================================== */
 
 :root {
-    /* Primary Colors - Ocean Theme */
     --primary: #0EA5E9;
     --primary-light: #38BDF8;
     --primary-dark: #0284C7;
     
-    /* Ocean Scale */
     --ocean-50: #F0F9FF;
     --ocean-100: #E0F2FE;
     --ocean-200: #BAE6FD;
@@ -20,12 +18,10 @@
     --ocean-800: #075985;
     --ocean-900: #0C4A6E;
     
-    /* Backgrounds */
     --bg-primary: #000000;
     --bg-secondary: #09090B;
     --bg-tertiary: #18181B;
     
-    /* Text */
     --text-primary: #FFFFFF;
     --text-secondary: #E4E4E7;
     --text-tertiary: #A1A1AA;
@@ -160,7 +156,7 @@ body {
     background: linear-gradient(135deg, rgba(14, 165, 233, 0.08) 0%, rgba(14, 165, 233, 0.02) 100%);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(14, 165, 233, 0.15);
-    border-radius: 20px;
+    border-radius: 16px;
     transition: all 0.4s ease;
 }
 
@@ -169,7 +165,62 @@ body {
     transform: translateY(-2px);
 }
 
-/* Accordion */
+/* ========================================
+   MARQUEE TESTIMONIALS
+   ======================================== */
+.marquee-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee-container::before,
+.marquee-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.marquee-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-primary), transparent);
+}
+
+.marquee-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-primary), transparent);
+}
+
+.marquee-track {
+    display: flex;
+    animation: marquee 40s linear infinite;
+    width: fit-content;
+}
+
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee-card {
+    flex-shrink: 0;
+    border-left: 3px solid var(--ocean-500);
+}
+
+/* ========================================
+   ACCORDIONS
+   ======================================== */
 .accordion-toggle svg {
     transition: transform 0.3s ease;
 }
@@ -193,64 +244,12 @@ body {
     }
 }
 
-/* Testimonial Carousel */
-#testimonial-carousel {
-    position: relative;
-    overflow: hidden;
+.faq-toggle svg {
+    transition: transform 0.3s ease;
 }
 
-.testimonial-track {
-    width: 500%;
-}
-
-.testimonial-slide {
-    width: 20%;
-}
-
-.testimonial-prev,
-.testimonial-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    cursor: pointer;
-}
-
-.testimonial-prev {
-    left: -50px;
-}
-
-.testimonial-next {
-    right: -50px;
-}
-
-.testimonial-dot.active {
-    background: var(--ocean-500);
-}
-
-@media (max-width: 768px) {
-    .testimonial-prev {
-        left: 0;
-    }
-    .testimonial-next {
-        right: 0;
-    }
-}
-
-/* Particles */
-.particle {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: var(--ocean-500);
-    border-radius: 50%;
-    opacity: 0.3;
-    animation: float-particle 20s infinite ease-in-out;
-}
-
-@keyframes float-particle {
-    0%, 100% { transform: translate(0, 0); opacity: 0.3; }
-    50% { transform: translate(50px, -100px); opacity: 0.6; }
+.faq-toggle.active svg {
+    transform: rotate(180deg);
 }
 
 /* Language Toggle */
@@ -313,5 +312,9 @@ iframe {
     
     .glass-card {
         padding: 16px;
+    }
+    
+    .marquee-track {
+        animation-duration: 25s;
     }
 }
