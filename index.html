@@ -52,6 +52,7 @@
             <div class="hidden md:flex items-center gap-6">
                 <a href="#habitaciones" class="nav-link font-medium">Habitaciones</a>
                 <a href="#experiencias" class="nav-link font-medium">Experiencias</a>
+                <a href="#galeria" class="nav-link font-medium">Galería</a>
                 <a href="#faq" class="nav-link font-medium">FAQ</a>
                 <a href="#ubicacion" class="nav-link font-medium">Ubicación</a>
             </div>
@@ -80,6 +81,7 @@
             <div class="px-4 py-3 flex flex-col gap-3">
                 <a href="#habitaciones" class="py-2 border-b border-white/10">Habitaciones</a>
                 <a href="#experiencias" class="py-2 border-b border-white/10">Experiencias</a>
+                <a href="#galeria" class="py-2 border-b border-white/10">Galería</a>
                 <a href="#faq" class="py-2 border-b border-white/10">FAQ</a>
                 <a href="#ubicacion" class="py-2">Ubicación</a>
                 <a href="https://wa.me/526121077805?text=Hola,%20quisiera%20reservar%20en%20Terrazica" class="bg-green-500 text-center py-3 rounded-xl font-bold">
@@ -556,6 +558,80 @@
                     <p class="text-gray-300 lang-es">Desde tacos de pescado frente al mar hasta cocktails artesanales en beach clubs cercanos. Zicatela tiene restaurantes para todos los gustos.</p>
                     <p class="text-gray-300 lang-en hidden">From fish tacos on the beach to craft cocktails at nearby beach clubs. Zicatela has restaurants for all tastes.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería del Hostel -->
+    <section id="galeria" class="py-16 bg-slate-900">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-cyan-400 text-sm font-semibold uppercase tracking-wider">📸 Galería</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold mt-3 mb-4">
+                    <span class="lang-es">Conócenos</span>
+                    <span class="lang-en hidden">Get to know us</span>
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto lang-es">Mira cómo es nuestro espacio. La entrada, las áreas compartidas y la vista desde arriba.</p>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto lang-en hidden">See what our space looks like. The entrance, common areas and view from above.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Vista general desde arriba -->
+                <div class="md:col-span-2 lg:col-span-2 bg-slate-800 rounded-2xl overflow-hidden border border-cyan-500/20">
+                    <img src="https://i.ibb.co/Z6xGRLdx/terra-zica-frente-fachada.png" alt="Vista general Terrazica" class="w-full h-64 md:h-80 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold lang-es">Vista desde arriba</h3>
+                        <h3 class="text-lg font-bold lang-en hidden">Bird's eye view</h3>
+                        <p class="text-gray-400 text-sm lang-es">El hostal visto desde la azotea - entrada por pasillo a la derecha</p>
+                        <p class="text-gray-400 text-sm lang-en hidden">The hostel seen from the roof - entrance through hallway on the right</p>
+                    </div>
+                </div>
+                
+                <!-- Vista derecha -->
+                <div class="bg-slate-800 rounded-2xl overflow-hidden border border-cyan-500/20">
+                    <div class="h-48 md:h-64 bg-gradient-to-br from-cyan-900 to-blue-900 flex items-center justify-center">
+                        <span class="text-6xl">🏨</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold lang-es">Entrada Principal</h3>
+                        <h3 class="text-lg font-bold lang-en hidden">Main Entrance</h3>
+                        <p class="text-gray-400 text-sm lang-es">Sube al segundo piso</p>
+                        <p class="text-gray-400 text-sm lang-en hidden">Go up to the 2nd floor</p>
+                    </div>
+                </div>
+                
+                <!-- Cocina -->
+                <div class="bg-slate-800 rounded-2xl overflow-hidden border border-cyan-500/20">
+                    <div class="h-48 bg-gradient-to-br from-orange-900 to-red-900 flex items-center justify-center">
+                        <span class="text-6xl">🍳</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold lang-es">Cocina Compartida</h3>
+                        <h3 class="text-lg font-bold lang-en hidden">Shared Kitchen</h3>
+                        <p class="text-gray-400 text-sm lang-es">Totalmente equipada para huéspedes</p>
+                        <p class="text-gray-400 text-sm lang-en hidden">Fully equipped for guests</p>
+                    </div>
+                </div>
+                
+                <!-- Área común -->
+                <div class="md:col-span-2 lg:col-span-2 bg-slate-800 rounded-2xl overflow-hidden border border-cyan-500/20">
+                    <div class="h-48 md:h-64 bg-gradient-to-br from-purple-900 to-pink-900 flex items-center justify-center">
+                        <span class="text-6xl">📺</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold lang-es">Área Común</h3>
+                        <h3 class="text-lg font-bold lang-en hidden">Common Area</h3>
+                        <p class="text-gray-400 text-sm lang-es">Sala con TV, perfectapara conocer viajeros</p>
+                        <p class="text-gray-400 text-sm lang-en hidden">Living room with TV, perfect to meet travelers</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="https://wa.me/526121077805?text=Hola,%20quiero%20ver%20más%20fotos%20de%20Terrazica" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-6 py-3 rounded-xl transition">
+                    📷 <span class="lang-es">Ver más fotos</span>
+                    <span class="lang-en hidden">See more photos</span>
+                </a>
             </div>
         </div>
     </section>
