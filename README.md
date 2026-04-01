@@ -1,12 +1,23 @@
 # 🏨 Terrazica - Landing Page Premium Dark Mode
 
 <div align="center">
-    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400" alt="Terrazica Hotel" width="400"/>
-    <br/><br/>
-    <a href="https://terrazica.netlify.app" target="_blank">
-        <img src="https://img.shields.io/badge/🌐 Ver Demo-En Vivo-0EA5E9?style=for-the-badge" alt="Live Demo"/>
-    </a>
+
+[![Live Demo](https://img.shields.io/badge/🌐_Ver_Sitio-0EA5E9?style=for-the-badge&logo=firefox-browser)](https://oscaromargp.github.io/terrazica/)
+[![GitHub Repo](https://img.shields.io/badge/📦_Repositorio-181717?style=for-the-badge&logo=github)](https://github.com/oscaromargp/terrazica)
+[![Download ZIP](https://img.shields.io/badge/⬇️_Descargar-228B22?style=for-the-badge&logo=file-zipper)](https://github.com/oscaromargp/terrazica/archive/refs/heads/main.zip)
+
 </div>
+
+---
+
+## 🌐 Enlaces del Proyecto
+
+| Recurso | URL |
+|---------|-----|
+| **🌐 Sitio en Vivo** | https://oscaromargp.github.io/terrazica/ |
+| **📦 Repositorio** | https://github.com/oscaromargp/terrazica |
+| **⬇️ Descargar .zip** | https://github.com/oscaromargp/terrazica/archive/refs/heads/main.zip |
+| **📋 Clonar repo** | `git clone https://github.com/oscaromargp/terrazica.git` |
 
 ---
 
@@ -94,29 +105,110 @@ terrazica/
 
 ---
 
-## 🎯 Prompts Originales de Creación
+## 📄 DOSSIER EJECUTIVO: TERRAZICA ZICATELA
 
-### Prompt Base
+### 1. Análisis del Sitio y Ubicación
+
+| Campo | Detalle |
+|-------|---------|
+| **Nombre del Establecimiento** | Terrazica |
+| **Ubicación** | Av. Del Morro 3, Playa Zicatela, Brisas de Zicatela, Oaxaca |
+| **Nicho de Mercado** | Turismo joven, surfistas, nómadas digitales y comunidad LGBTQ+ |
+| **Zona** | Zicatela es mundialmente conocida por su "Mexican Pipeline" (surf de alto nivel). Es una zona vibrante, con vida nocturna activa y una atmósfera bohemia/relajada. |
+| **Identidad Visual sugerida** | Estilo rústico-moderno, integración con la naturaleza y vistas al mar |
+
+### 2. Objetivos de la Landing Page
+
+- **Conversión Inmediata**: Facilitar reservas vía WhatsApp o motor de reserva.
+- **Multilingüismo**: Superar la barrera idiomática para captar al mercado extranjero (USA, Canadá, Europa).
+- **Posicionamiento SEO**: Dominar búsquedas locales como "Hotel en Zicatela" o "Donde hospedarse en Puerto Escondido".
+
+### 3. Propuesta de Estructura UX/UI
+
+#### A. Header (Encabezado)
+- **Logo**: Terrazica (esquina izquierda).
+- **Selector de Idioma**: Banderas (🇲🇽 ESP / 🇺🇸 ENG) - Implementado con Google Translate API o IPAPI.
+- **Botón CTA**: "Reservar Ahora / Book Now".
+
+#### B. Hero Section (Imagen Principal)
+- **Fondo**: Fotografía de alta calidad de la terraza con vista al mar.
+- **Texto Principal (H1)**: 
+  - *ES*: "Tu refugio frente al mar en el corazón de Zicatela."
+  - *EN*: "Your oceanfront sanctuary in the heart of Zicatela."
+- **Subtexto**: "Vive la experiencia Terrazica: Surf, Comunidad y Atardeceres Inolvidables."
+
+#### C. Sobre Nosotros & Nicho (Sección "Friendly")
+- **Iconos destacados**:
+  - 🏳️‍🌈 LGBTQ+ Friendly: Un espacio seguro y abierto para todos.
+  - 🏄 Surf Community: Cerca de los mejores breaks.
+  - 🌐 High Speed Wi-Fi: Para nómadas digitales.
+
+#### D. Información Clave y Servicios
+- **Check-out**: 11:00 AM.
+- **Ubicación**: Mapa interactivo de Google Maps embebido.
+- **Contacto Directo**: Botón flotante de WhatsApp vinculado al número +52 954 103 0517.
+
+#### E. Social Proof (Comentarios y Redes)
+- Feed de Instagram: Fotos de huéspedes etiquetando el lugar.
+- Testimonios: Extracción de comentarios positivos de Google y Facebook.
+- Enlace directo: Visítanos en Facebook
+
+### 4. Estrategia de Traducción (Crucial para extranjeros)
+
+- **Detección Automática de IP**: Si el usuario entra desde fuera de México, la página carga automáticamente en inglés.
+- **Traducción**: Los textos principales están escritos profesionalmente (no solo Google Translate).
+
+### 5. Ficha Técnica
+
+| Campo | Detalle |
+|-------|---------|
+| **Plataforma** | HTML5 + Tailwind CSS + JavaScript |
+| **Integración WhatsApp** | https://wa.me/529541030517?text=Hola,%20quisiera%20reservar%20en%20Terrazica |
+| **SEO Local** | Schema Markup para "Hotel/Hostel" y "Local Business" |
+| **Enlace Google Maps** | https://www.google.com/maps?q=Av.+Del+Morro+3,+Playa+Zicatela,+70934+Brisas+de+Zicatela,+Oax. |
+| **Facebook** | https://facebook.com/ |
+
+---
+
+## 🎯 Prompt Original de Creación
+
+```
+# 🚀 PROMPT UNIVERSAL: Landing Page Premium Dark Mode
+
+## 📋 INSTRUCCIONES PARA LA IA
+
+### ❓ PREGUNTA 1: Información del Negocio
+**Nombre del negocio/marca:** Terrazica
+**Tagline (frase descriptiva en 1 línea):** Tu refugio frente al mar en el corazón de Zicatela
+**Propuesta de valor (qué haces/ofreces):** Hotel boutique en Zicatela, Puerto Escondido. Surf, Comunidad y Atardeceres Inolvidables. LGBTQ+ Friendly.
+
+### ❓ PREGUNTA 2: Sector y Estilo
+**Sector/Industria:** Turismo/Surf/Hospitalidad
+
+**Tipo de web:** 
+- [x] **Personal** (para el nicho de mercado: surfistas, nómadas digitales, comunidad LGBTQ+)
+
+### ❓ PREGUNTA 3: Color Principal
+**Color de acento principal:**
+- [x] Cian (#06B6D4) - Cambiado a Azul Océan (#0EA5E9) para mejor adaptación al sector turístico/surf
+```
+
+### Prompt Específico Aplicado:
+
 ```
 Crea una landing page premium dark mode para un hotel boutique 
 llamado Terrazica en Zicatela, Puerto Escondido. El sitio debe 
 ser multilingüe (español/inglés), tener detección automática de IP, 
 incluir flip cards para las habitaciones, integración con WhatsApp, 
 y estar orientado a surfistas, nómadas digitales y comunidad LGBTQ+.
+
+Usa el dossier ejecutivo proporcionado con:
+- Ubicación: Av. Del Morro 3, Playa Zicatela
+- WhatsApp: +52 954 103 0517
+- Check-out: 11:00 AM
+- Características: LGBTQ+ Friendly, Surf Community, High Speed Wi-Fi
+- Habitaciones: Estándar ($800), Suite Vista Mar ($1,400), Villa Privada ($2,500)
 ```
-
-### Análisis del Proyecto
-
-| Aspecto | Detalle |
-|---------|---------|
-| **Nombre** | Terrazica |
-| **Ubicación** | Av. Del Morro 3, Zicatela, Oaxaca |
-| **Tipo de Web** | Landing Page Hotel Boutique |
-| **Sector** | Turismo/Surf/Hospitalidad |
-| **Nicho** | Surfistas, Nómadas Digitales, LGBTQ+ |
-| **Color Principal** | Azul Océan (#0EA5E9) |
-| **Estilo Visual** | Dark Luxury, Moderno, Inclusivo |
-| **Idioma** | Español/Inglés (automático) |
 
 ---
 
@@ -144,6 +236,11 @@ y estar orientado a surfistas, nómadas digitales y comunidad LGBTQ+.
 - ✅ Mobile menu optimizado
 - ✅ Documentación completa README
 
+### v3.1.0 (2026-04-01)
+- ✅ Repository actualizado con enlaces
+- ✅ GitHub Pages habilitado
+- ✅ README mejorado con dossier completo
+
 ---
 
 ## ⚙️ Configuración
@@ -167,7 +264,7 @@ const address = 'Av. Del Morro 3, Zicatela';
 
 ```bash
 # Clonar repositorio
-git clone https://github.com/tu-usuario/terrazica.git
+git clone https://github.com/oscaromargp/terrazica.git
 
 # Entrar al directorio
 cd terrazica
@@ -180,32 +277,11 @@ cd terrazica
 
 ## 🚀 Deployment
 
-### GitHub Pages (Gratuito)
+### GitHub Pages (Gratuito) - Ya Configurado ✅
 
-```bash
-# 1. Push a GitHub
-git add .
-git commit -m "Initial commit"
-git push origin main
-
-# 2. Ir a Settings > Pages
-# 3. Source: Deploy from branch
-# 4. Branch: main, Folder: /
-# 5. Save y esperar ~2 minutos
-```
-
-### Vercel (Recomendado)
-
-```bash
-# Instalar Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel
-
-# O conectar directamente desde GitHub
-# https://vercel.com
-```
+El sitio ya está desplegado en GitHub Pages:
+- **URL**: https://oscaromargp.github.io/terrazica/
+- **Estado**: Activo y funcionando
 
 ### Netlify (Alternativo)
 
@@ -224,7 +300,7 @@ vercel
 <meta property="og:title" content="Terrazica | Tu Refugio Frente al Mar">
 <meta property="og:description" content="Hotel boutique en Zicatela. Surf, Comunidad y Atardeceres Inolvidables">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://terrazica.com">
+<meta property="og:url" content="https://oscaromargp.github.io/terrazica/">
 <meta property="og:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
 
 <!-- Twitter Card -->
@@ -269,40 +345,6 @@ En `styles.css`, busca y modifica:
 }
 ```
 
-### Agregar Nuevo Testimonio
-
-En `index.html`,找到 `#testimonials` y agrega:
-
-```html
-<div class="glass-card p-8">
-    <div class="flex gap-1 mb-4">★★★★★</div>
-    <p class="text-gray-300 mb-6">"Tu testimonio aquí"</p>
-    <div class="flex items-center gap-3">
-        <div class="w-12 h-12 bg-ocean-500 rounded-full">Inicial</div>
-        <div>
-            <div class="font-semibold">Nombre</div>
-            <div class="text-sm text-gray-400">Ciudad, País</div>
-        </div>
-    </div>
-</div>
-```
-
-### Agregar FAQ
-
-En `index.html`,找到 `#faq` y agrega:
-
-```html
-<div class="glass-card p-6">
-    <button class="faq-toggle w-full flex items-center justify-between">
-        <span class="font-semibold">Tu Pregunta</span>
-        <svg class="w-5 h-5">...</svg>
-    </button>
-    <div class="faq-content mt-4 text-gray-300 hidden">
-        Tu Respuesta
-    </div>
-</div>
-```
-
 ---
 
 ## 🗺️ Roadmap - Fases del Proyecto
@@ -335,14 +377,13 @@ En `index.html`,找到 `#faq` y agrega:
 ## 📞 Créditos
 
 ### Desarrollador
-- **Nombre:** [Tu Nombre]
-- **Email:** [tu-email@ejemplo.com]
-- **GitHub:** [github.com/tu-usuario]
+- **Nombre:** Oscar
+- **GitHub:** https://github.com/oscaromargp
 
 ### Recursos Utilizados
 - Imágenes: [Unsplash](https://unsplash.com)
 - Fonts: [Google Fonts](https://fonts.google.com)
-- Icons: [SVG Inline](https://github.com/)
+- CSS Framework: [Tailwind CSS](https://tailwindcss.com)
 
 ### Licencia
 MIT License - Feel free to use and modify for your own projects.
