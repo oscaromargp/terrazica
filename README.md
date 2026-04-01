@@ -124,7 +124,7 @@ El sitio ya está desplegado en **GitHub Pages**:
 ---
 
 <div align="center">
-    <a href="https://wa.me/529541030517?text=Hola,%20quisiera%20reservar%20en%20Terrazica">
+    <a href="https://wa.me/526121077805?text=Hola,%20quisiera%20reservar%20en%20Terrazica">
         <img src="https://img.shields.io/badge/Reservar por WhatsApp-25D366?style=for-the-badge&logo=whatsapp" alt="WhatsApp"/>
     </a>
 </div>
